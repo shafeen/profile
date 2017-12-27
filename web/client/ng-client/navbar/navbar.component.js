@@ -12,12 +12,12 @@ angular.module('basicMEAN')
         left : {
             public: [
                 {
-                    path: { primary: '/view1', alt: '/'},
-                    displayName: 'View 1'
+                    path: { primary: '/profile', alt: '/'},
+                    displayName: 'Profile'
                 },
                 {
-                    path: { primary: '/view2'},
-                    displayName: 'View 2'
+                    path: { primary: '/showcase'},
+                    displayName: 'Showcase'
                 }
 
             ],

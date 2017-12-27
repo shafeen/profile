@@ -8,7 +8,9 @@ div
           span.icon-bar
           span.icon-bar
           span.icon-bar
-        a.navbar-brand(href='#/view1') basicMEAN
+        a.navbar-brand(href='#/view-profile')
+          i.fa.fa-user-circle-o
+          | &nbsp; Profile
 
       // Collect the nav links, forms, and other content for toggling
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
@@ -16,11 +18,6 @@ div
           li(ng-repeat="view in navbar.data.left.public"
               class="{{(navbar.$location.path()==view.path.primary || navbar.$location.path() == view.path.alt)? 'active' : ''}}")
             a(ng-href='#{{view.path.primary}}') {{view.displayName}}
-
-          if user
-            li(ng-repeat="view in navbar.data.left.protected"
-                class="{{(navbar.$location.path()==view.path.primary || navbar.$location.path() == view.path.alt)? 'active' : ''}}")
-              a(ng-href='#{{view.path.primary}}') {{view.displayName}}
 
           li(ng-show='navbar.loading')
             a(href='')

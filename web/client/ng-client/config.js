@@ -2,16 +2,16 @@ angular.module('basicMEAN', ["ngRoute"])
 .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
         .when("/", {
-            templateUrl: "partials/view1/view1",
-            controller: "View1Ctrl as $ctrl"
+            templateUrl: "partials/view-profile/view-profile",
+            controller: "ViewProfileCtrl as $ctrl"
         })
-        .when("/view1", {
-            templateUrl: "partials/view1/view1",
-            controller: "View1Ctrl as $ctrl"
+        .when("/profile", {
+            templateUrl: "partials/view-profile/view-profile",
+            controller: "ViewProfileCtrl as $ctrl"
         })
-        .when("/view2", {
-            templateUrl: "partials/view2/view2",
-            controller: "View2Ctrl as $ctrl"
+        .when("/showcase", {
+            templateUrl: "partials/view-showcase/view-showcase",
+            controller: "ViewShowcaseCtrl as $ctrl"
         })
         .when("/search", {
             templateUrl: "partials/view-search/view-search",
