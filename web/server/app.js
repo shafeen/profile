@@ -11,8 +11,8 @@ const passport = require('passport');
 const flash = require('express-flash');
 
 // connect to the database -- NOTE: uncomment when you're ready to add in persistence
-const databaseConfig = require('./config/database.js');
-databaseConfig(mongoose);
+// const databaseConfig = require('./config/database.js');
+// databaseConfig(mongoose);
 
 // configure passportjs for login and signup
 const passportConfig = require('./config/passport.js');
