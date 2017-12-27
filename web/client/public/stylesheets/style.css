@@ -11,6 +11,16 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
+
+/* Navbar modifications */
+.navbar-brand {
+  padding: 25px 15px;
+}
+.navbar-nav > li > a {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
