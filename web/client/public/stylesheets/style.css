@@ -44,6 +44,18 @@ body {
   font-weight: 600;
 }
 
+/* ".navbar-bold" theme for pills */
+.nav-pills.navbar-gold li.active > a {
+  color: white;
+  background-color: #9e9051;
+}
+.nav-pills.navbar-gold > li > a {
+  color: #5f5400;
+}
+/*.nav-pills.navbar-gold > li > a:hover {*/
+  /*background-color: #efece0;*/
+/*}*/
+
 /* view content */
 [ng-view] {
   font-family: 'Cabin', sans-serif;
