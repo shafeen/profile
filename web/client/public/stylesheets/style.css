@@ -25,6 +25,32 @@ body {
   padding-bottom: 25px;
 }
 
+/* ".navbar-gold" theme (use with .navbar-inverse) */
+.navbar-inverse.navbar-gold {
+  background-color: #c5bd63;
+  border-color: #5f5400;
+}
+.navbar-inverse.navbar-gold .navbar-brand {
+  color: #5f5400;
+}
+.navbar-inverse.navbar-gold .navbar-nav > .active > a {
+  color: white;
+  background-color: #9e9051;
+}
+.navbar-inverse.navbar-gold .navbar-nav > li > a {
+  color: #5f5400;
+}
+.navbar-inverse.navbar-gold a:hover {
+  font-weight: 600;
+}
+
+/* view content */
+[ng-view] {
+  font-family: 'Cabin', sans-serif;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
