@@ -1,5 +1,5 @@
 body {
-  padding-top: 65px
+  padding-top: 71px
 }
 
 /* Sticky footer styles */
@@ -48,7 +48,6 @@ body {
 [ng-view] {
   font-family: 'Cabin', sans-serif;
   font-size: 16px;
-  padding-top: 10px;
 }
 
 .footer {
