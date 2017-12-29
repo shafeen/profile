@@ -1,14 +1,32 @@
 angular.module('basicMEAN')
 .controller('ViewProfileCtrl', ['Settings', function (Settings) {
-    let self = this;
+    let ctrl = this;
 
-    self.message = 'This is some more text relevant to view 1, but is stored in the View1Ctrl.';
+    ctrl.data = {
+        navPills: [
+            {
+                displayName: "About Me",
+                code: 'aboutMe',
+            },
+            {
+                displayName: "Resume",
+                code: 'resume',
+            }
+        ],
+        activeNavPillIndex: '0'
+    };
 
-    self.$onInit = function () {
+    ctrl.message = 'This is some more text relevant to view 1, but is stored in the View1Ctrl.';
+
+    ctrl.setNavPill = function (index) {
+        ctrl.data.activeNavPillIndex = index;
+    };
+
+    ctrl.$onInit = function () {
         Settings.init.then(function () {
-            self.message = Settings.data.view1Msg;
+            ctrl.message = Settings.data.view1Msg;
         })
     };
 
-    self.$onInit();
+    ctrl.$onInit();
 }]);

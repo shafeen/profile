@@ -1,4 +1,13 @@
 div
-  h3.text-center This is view 1
-  p
-    | {{$ctrl.message}}
+  .container
+    .row
+      .col-md-2.col-sm-3
+        br
+        br
+        ul.nav.nav-pills.navbar-gold.nav-stacked
+          li(ng-repeat="pill in $ctrl.data.navPills track by $index",
+             ng-class="{active: $index==$ctrl.data.activeNavPillIndex}")
+            a(href="", ng-click="$ctrl.setNavPill($index)") {{pill.displayName}}
+
+      .col-md-10.col-sm-9
+        about-me(ng-show="$ctrl.data.activeNavPillIndex==0")
