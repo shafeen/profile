@@ -4,14 +4,8 @@ angular.module('basicMEAN')
 
     ctrl.data = {
         navPills: [
-            {
-                displayName: "About Me",
-                code: 'aboutMe',
-            },
-            {
-                displayName: "Resume",
-                code: 'resume',
-            }
+            { displayName: "About Me" },
+            { displayName: "Resume" }
         ],
         activeNavPillIndex: '0'
     };

@@ -1,23 +1,29 @@
 style.
   about-me > div {
     padding-top: 20px;
+    font-size: 20px;
+    color: #777
   }
   img {
-    width: 220px;
+    width: 120px;
     border: 5px solid #9e9051;
     margin-top: 10px;
   }
 
 .row
-  .col-md-12
-    img#aboutMeImg.img-circle.img-responsive.center-block(
-      src="/images/linkedin-profile.jpg")
+  .col-md-8.col-md-offset-2.col-sm-10.col-sm-offset-1
+    .row
+      .col-md-4.col-sm-4.col-xs-4
+        img#aboutMeImg.img-circle.img-responsive.center-block(
+          src="/images/linkedin-profile.jpg")
+      .col-md-8.col-sm-8.col-xs-8.text-left
+        h2.text-primary John William Doe
+        h3.text-muted Software Engineer and Architect
+    .row
+      .col-md-12
+        hr
 .row
-  .col-md-12.text-center
-    h1.text-primary John Doe
-    h3.text-info Software Architect
-.row.text-info
-  .col-md-8.col-md-offset-2.text-justify
+  .col-md-8.col-md-offset-2.col-sm-10.col-sm-offset-1.text-justify
     p
       | We are all connected; To each other, biologically.
       | To the earth, chemically. To the rest of the universe atomically.
@@ -28,8 +34,5 @@ style.
       | future generations and their quest to ensure the survival of the human
       | species.
 
-.row.text-info
-  .col-md-8.col-md-offset-2.text-justify
-    h3.text-center An informal F.A.Q.
 
 

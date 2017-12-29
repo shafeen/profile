@@ -25,12 +25,7 @@ angular.module('basicMEAN')
         }
         ,
         right : {
-            public : [
-                {
-                    path: { primary: '/about' },
-                    displayName: 'About (test)'
-                }
-            ],
+            public : [],
             protected: []
         }
     };
