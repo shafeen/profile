@@ -10,6 +10,7 @@
     "start": "gulp watch-angular | nodemon -e pug,html,js ./server/bin/www"
   },
   "dependencies": {
+    "angular-timeline": "^1.7.0",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "~1.15.2",
     "cookie-parser": "~1.4.3",

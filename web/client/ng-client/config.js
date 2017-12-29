@@ -1,4 +1,4 @@
-angular.module('basicMEAN', ["ngRoute"])
+angular.module('basicMEAN', ["ngRoute", "angular-timeline"])
 .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
         .when("/", {
