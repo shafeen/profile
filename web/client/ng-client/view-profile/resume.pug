@@ -1,0 +1,26 @@
+style.
+  timeline-panel {
+    border-radius: 10px;
+  }
+
+.row
+  .col-md-8.col-md-offset-2.col-sm-10.col-sm-offset-1
+    br
+    h2.text-primary.text-center My Resume
+    hr
+.row
+  .col-md-8.col-md-offset-2.col-sm-10.col-sm-offset-1
+    h3.text-muted.text-center Work Experience
+    timeline
+      timeline-event(ng-repeat='experience in $ctrl.data.workExperience')
+        timeline-badge(class='{{experience.badgeClass}}')
+          i.glyphicon(class='{{experience.badgeIconClass}}')
+        timeline-panel(class='{{experience.badgeClass}}')
+          timeline-heading
+            h4.text-info {{experience.dates}}
+            hr
+            h3 {{experience.title}}
+            h4
+              i {{experience.company}}
+          p.text-muted {{experience.content}}
+
