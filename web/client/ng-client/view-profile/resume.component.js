@@ -49,6 +49,15 @@ angular.module('basicMEAN')
             location: 'Ann Arbor, MI',
             graduated: 'May 2014',
             degree: 'Bachelor of Arts & Sciences',
-        }
+        };
+        ctrl.data.skills = [
+            {
+                name: 'Skills - Languages',
+                labelClass: 'label-primary',
+                keywords: [
+                    'Java', 'PHP', 'JavaScript', 'Python', 'HTML', 'CSS'
+                ]
+            }
+        ];
 
     }]);

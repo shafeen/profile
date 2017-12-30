@@ -2,6 +2,19 @@ style.
   timeline-panel {
     border-radius: 10px;
   }
+  .timeline-dates {
+    font-family: 'consolas', 'menlo', monospace;
+  }
+  .resume-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .resume-skill-badge {
+    display: block;
+    font-size: 18px;
+    margin-right: 5px;
+  }
 
 .row
   .col-md-10.col-md-offset-1.col-sm-10.col-sm-offset-1
@@ -21,7 +34,7 @@ style.
           i.glyphicon(class='{{experience.badgeIconClass}}')
         timeline-panel(class='{{experience.badgeClass}}')
           timeline-heading
-            h4.text-info {{experience.dates}}
+            h4.timeline-dates.text-info {{experience.dates}}
             hr
             h3 {{experience.title}}
             h4
@@ -37,13 +50,21 @@ style.
           i.glyphicon(class='{{$ctrl.data.education.badgeIconClass}}')
         timeline-panel(class='{{$ctrl.data.education.badgeClass}}')
           timeline-heading
+            h4.timeline-dates.text-info Graduated: {{$ctrl.data.education.graduated}}
+            hr
             h3 {{$ctrl.data.education.college}}
             h4
               i {{$ctrl.data.education.location}}
           h4 {{$ctrl.data.education.degree}}
-          h4 Graduated: {{$ctrl.data.education.graduated}}
 
     br
 
-    h3.text-muted.text-center Skills
-      // TODO: add skill badges
+    div(ng-repeat="skill in $ctrl.data.skills")
+      br
+      h3.resume-skill-title.text-muted.text-center {{skill.name}}
+        // TODO: add better skill badges (perhaps in a panel??)
+      .row
+        .resume-skills.col-md-12
+          span(ng-repeat="skillKeyword in skill.keywords")
+            span.resume-skill-badge.label(class="{{skill.labelClass}}") {{skillKeyword}}
+            | &nbsp;

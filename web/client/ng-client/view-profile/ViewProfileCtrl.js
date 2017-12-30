@@ -5,7 +5,7 @@ angular.module('basicMEAN')
     ctrl.data = {
         navPills: [
             { displayName: "About Me" },
-            { displayName: "Resume" }
+            { displayName: "My Resume" }
         ],
         activeNavPillIndex: '0'
     };
