@@ -4,13 +4,17 @@ style.
   }
 
 .row
-  .col-md-8.col-md-offset-2.col-sm-10.col-sm-offset-1
+  .col-md-10.col-md-offset-1.col-sm-10.col-sm-offset-1
     br
-    h2.text-primary.text-center My Resume
+    h2.text-primary.text-center
+      | My Resume &nbsp
+      a.btn.btn-default(href="/assets/resume.pdf")
+        | Printer Friendly &nbsp
+        span.glyphicon.glyphicon-download-alt
     hr
 .row
-  .col-md-8.col-md-offset-2.col-sm-10.col-sm-offset-1
-    h3.text-muted.text-center Work Experience
+  .col-md-10.col-md-offset-1.col-sm-10.col-sm-offset-1
+    h3.text-muted.text-center Experience
     timeline
       timeline-event(ng-repeat='experience in $ctrl.data.workExperience')
         timeline-badge(class='{{experience.badgeClass}}')
@@ -24,3 +28,22 @@ style.
               i {{experience.company}}
           p.text-muted {{experience.content}}
 
+    br
+
+    h3.text-muted.text-center Education
+    timeline
+      timeline-event
+        timeline-badge(class='{{$ctrl.data.education.badgeClass}}')
+          i.glyphicon(class='{{$ctrl.data.education.badgeIconClass}}')
+        timeline-panel(class='{{$ctrl.data.education.badgeClass}}')
+          timeline-heading
+            h3 {{$ctrl.data.education.college}}
+            h4
+              i {{$ctrl.data.education.location}}
+          h4 {{$ctrl.data.education.degree}}
+          h4 Graduated: {{$ctrl.data.education.graduated}}
+
+    br
+
+    h3.text-muted.text-center Skills
+      // TODO: add skill badges

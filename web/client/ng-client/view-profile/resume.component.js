@@ -42,6 +42,13 @@ angular.module('basicMEAN')
                 content: 'This is what I did there.'
             },
         ];
-
+        ctrl.data.education = {
+            badgeClass: 'info',
+            badgeIconClass: 'glyphicon-education',
+            college: 'Univerity of Michigan',
+            location: 'Ann Arbor, MI',
+            graduated: 'May 2014',
+            degree: 'Bachelor of Arts & Sciences',
+        }
 
     }]);
