@@ -11,4 +11,5 @@ div
 
       .col-md-10.col-sm-9
         about-me(ng-show="$ctrl.data.activeNavPillIndex==0")
-        resume(ng-show="$ctrl.data.activeNavPillIndex==1")
+        resume(ng-show="$ctrl.data.activeNavPillIndex==1",
+          resume-data="$ctrl.resumeData")

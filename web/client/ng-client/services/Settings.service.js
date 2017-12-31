@@ -8,5 +8,6 @@ angular.module('basicMEAN')
     self.init = $http.get("/settings/settings.json")
         .then(function (response) {
             self.data = response.data;
+            return self.data;
         });
 }]);

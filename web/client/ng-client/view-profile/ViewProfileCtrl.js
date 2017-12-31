@@ -10,15 +10,14 @@ angular.module('basicMEAN')
         activeNavPillIndex: '0'
     };
 
-    ctrl.message = 'This is some more text relevant to view 1, but is stored in the View1Ctrl.';
-
     ctrl.setNavPill = function (index) {
         ctrl.data.activeNavPillIndex = index;
     };
 
     ctrl.$onInit = function () {
-        Settings.init.then(function () {
-            ctrl.message = Settings.data.view1Msg;
+        Settings.init.then(function (settingsData) {
+            ctrl.resumeData = settingsData.profileView.resume;
+            // console.log(Settings.data.profileView);
         })
     };
 

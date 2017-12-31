@@ -29,7 +29,7 @@ style.
   .col-md-10.col-md-offset-1.col-sm-10.col-sm-offset-1
     h3.text-muted.text-center Experience
     timeline
-      timeline-event(ng-repeat='experience in $ctrl.data.workExperience')
+      timeline-event(ng-repeat='experience in $ctrl.resumeData.workExperience')
         timeline-badge(class='{{experience.badgeClass}}')
           i.glyphicon(class='{{experience.badgeIconClass}}')
         timeline-panel(class='{{experience.badgeClass}}')
@@ -46,20 +46,20 @@ style.
     h3.text-muted.text-center Education
     timeline
       timeline-event
-        timeline-badge(class='{{$ctrl.data.education.badgeClass}}')
-          i.glyphicon(class='{{$ctrl.data.education.badgeIconClass}}')
-        timeline-panel(class='{{$ctrl.data.education.badgeClass}}')
+        timeline-badge(class='{{$ctrl.resumeData.education.badgeClass}}')
+          i.glyphicon(class='{{$ctrl.resumeData.education.badgeIconClass}}')
+        timeline-panel(class='{{$ctrl.resumeData.education.badgeClass}}')
           timeline-heading
-            h4.timeline-dates.text-info Graduated: {{$ctrl.data.education.graduated}}
+            h4.timeline-dates.text-info Graduated: {{$ctrl.resumeData.education.graduated}}
             hr
-            h3 {{$ctrl.data.education.college}}
+            h3 {{$ctrl.resumeData.education.college}}
             h4
-              i {{$ctrl.data.education.location}}
-          h4 {{$ctrl.data.education.degree}}
+              i {{$ctrl.resumeData.education.location}}
+          h4 {{$ctrl.resumeData.education.degree}}
 
     br
 
-    div(ng-repeat="skill in $ctrl.data.skills")
+    div(ng-repeat="skill in $ctrl.resumeData.skills")
       br
       h3.resume-skill-title.text-muted.text-center {{skill.name}}
         // TODO: add better skill badges (perhaps in a panel??)
