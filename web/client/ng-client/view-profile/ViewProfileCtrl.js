@@ -17,8 +17,8 @@ angular.module('basicMEAN')
     ctrl.$onInit = function () {
         Settings.init.then(function (settingsData) {
             ctrl.resumeData = settingsData.profileView.resume;
-            // console.log(Settings.data.profileView);
-        })
+            ctrl.aboutMeData = settingsData.profileView.aboutMe;
+        });
     };
 
     ctrl.$onInit();

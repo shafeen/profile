@@ -8,5 +8,4 @@ angular.module('basicMEAN')
     })
     .controller('ResumeController', [function () {
         const ctrl = this;
-
     }]);
