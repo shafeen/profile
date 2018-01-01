@@ -17,7 +17,7 @@ style.
   }
 
 .row
-  .col-md-10.col-md-offset-1.col-sm-10.col-sm-offset-1
+  .col-md-12.col-sm-12
     br
     h2.text-primary.text-center
       | My Resume &nbsp
@@ -26,7 +26,7 @@ style.
         span.glyphicon.glyphicon-download-alt
     hr
 .row
-  .col-md-10.col-md-offset-1.col-sm-10.col-sm-offset-1
+  .col-md-12.col-sm-12
     h3.text-muted.text-center Experience
     timeline
       timeline-event(ng-repeat='experience in $ctrl.resumeData.workExperience')
@@ -58,7 +58,8 @@ style.
           h4 {{$ctrl.resumeData.education.degree}}
 
     br
-
+.row
+  .col-md-8.col-md-offset-2.col-sm-10.col-sm-offset-1
     div(ng-repeat="skill in $ctrl.resumeData.skills")
       br
       h3.resume-skill-title.text-muted.text-center {{skill.name}}
