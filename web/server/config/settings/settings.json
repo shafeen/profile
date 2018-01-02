@@ -64,6 +64,34 @@
       ]
 
     }
+  },
+  "showcaseView": {
+    "projects": [
+      {
+        "displayImgSrc": "images/thumbnailSample.svg",
+        "displayImgAlt": "Sample Project Image",
+        "title": "Project 1 Card Title",
+        "description": "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+        "linkText": "Learn More",
+        "link": "#"
+      },
+      {
+        "displayImgSrc": "images/thumbnailSample.svg",
+        "displayImgAlt": "Sample Project Image",
+        "title": "Project 1 Card Title",
+        "description": "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+        "linkText": "Learn More",
+        "link": "#"
+      },
+      {
+        "displayImgSrc": "images/thumbnailSample.svg",
+        "displayImgAlt": "Sample Project Image",
+        "title": "Project 1 Card Title",
+        "description": "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+        "linkText": "Learn More",
+        "link": "#"
+      }
+    ]
   }
 
 }

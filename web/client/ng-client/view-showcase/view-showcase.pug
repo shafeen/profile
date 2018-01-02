@@ -1,4 +1,13 @@
 div
-  h3.text-center And this is view 2
-  p
-    | {{$ctrl.message}}
+  br
+  .row
+    .col-md-4.col-sm-6(ng-repeat="project in $ctrl.showcaseData.projects")
+      .thumbnail
+        img(ng-src='{{project.displayImgSrc}}', alt='{{project.diplayImgAlt}}',
+          style='height: 100%; width: 100%; object-fit: contain')
+        .caption
+          h3 {{project.title}}
+          p {{project.description}}
+
+          p
+            a.btn.btn-primary(ng-href='{{project.link}}', role='button') {{project.linkText}}
